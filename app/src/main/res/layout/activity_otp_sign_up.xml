@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
-
+    tools:context=".OtpSignUp">
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -17,7 +16,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Get Code"
+        android:text="Enter Code"
         android:textSize="20sp"
         android:textAlignment="center"
         android:textColor="#6e6e6e"
@@ -25,60 +24,52 @@
         android:padding="20dp"
         android:layout_below="@+id/logo"
         android:id="@+id/textheading"/>
-
-
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_centerVertical="true"
-       android:id="@+id/centerhorizontalline">
-
-   </RelativeLayout>
-    <com.hbb20.CountryCodePicker
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        app:ccp_areaCodeDetectedCountry="true"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_above="@+id/centerhorizontalline"
-        android:id="@+id/countrycode"
-        android:layout_marginBottom="20dp"
-        app:ccp_autoDetectCountry="true"/>
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"
-        android:id="@+id/getphonenumber"
-        android:textAlignment="center"
-        android:inputType="number"
-        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textheading"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
+        android:hint="Enter Code......"
         android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/centerhorizontalline"
-        android:hint="Enter Phone Number"/>
+        android:textColor="@color/black"
+        android:id="@+id/entercode"
+        android:textAlignment="center"
+        android:inputType="number"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Didnt Get Code? Edit Number"
+        android:id="@+id/changenumber"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/entercode"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"/>
     <android.widget.Button
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_below="@id/getphonenumber"
-        android:id="@+id/sendotp"
+        android:layout_below="@id/changenumber"
+        android:id="@+id/verifyotp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:text="Verify Code"
         android:textColor="@color/white"
         android:paddingLeft="40dp"
+        android:layout_marginTop="50dp"
         android:paddingRight="40dp"
-        android:text="Get Code"
-        android:textSize="15sp"
-        android:background="#25d366"/>
+        android:background="#25d366"
+        android:textAlignment="center"
+        />
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/sendotp"
-        android:id="@+id/mainactivitypb"
+        android:layout_below="@id/verifyotp"
+        android:id="@+id/otpsinguppb"
         android:visibility="invisible"
         android:layout_marginTop="30dp"
         />
+
 
 </RelativeLayout>
